@@ -20,6 +20,6 @@ public class ScheduledTasks {
 
     @Scheduled(fixedRateString = "${app.schedule.rate}")
     public void reportCurrentTime() {
-        logger.log(Level.INFO, "The time is now {0} [Schedlule rate is {1}]", new Object[]{dateFormat.format(new Date()), rate});
+        logger.log(Level.INFO, "The time is now {0} [Schedule rate is {1}]", new Object[]{dateFormat.format(new Date()), rate});
     }
 }
