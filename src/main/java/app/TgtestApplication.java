@@ -1,16 +1,20 @@
-package com.thgross.tgtest;
+package app;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @SpringBootApplication
 @RestController
+@EnableScheduling
 public class TgtestApplication {
 
     @Autowired
@@ -28,6 +32,8 @@ public class TgtestApplication {
     @GetMapping("/")
     public String index() {
         var sb = new StringBuilder();
+
+        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).log(Level.INFO, "GET /");
 
         sb.append("Hello World!");
         sb.append("<br>");

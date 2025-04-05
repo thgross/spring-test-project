@@ -1,0 +1,8 @@
+app:
+  schedule:
+    rate: 4000
+
+spring:
+  output:
+    ansi:
+      enabled: always
