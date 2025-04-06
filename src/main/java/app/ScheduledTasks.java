@@ -24,7 +24,7 @@ public class ScheduledTasks {
 //    @Scheduled(fixedRateString = "${app.schedule.rate}")
     @Scheduled(fixedDelayString = "${app.schedule.delay}")
     public void reportCurrentTime() throws InterruptedException {
-        logger.log(Level.INFO, "The time is now {0} (Schedule delay is {1}, Sleep is {2})", new Object[]{dateFormat.format(new Date()), delay, 7000});
-        Thread.sleep(7000); // dauert 7 Sekunden
+        logger.log(Level.INFO, "The time is now {0} (Schedule delay is {1}, Sleep is {2})", new Object[]{dateFormat.format(new Date()), delay, 2000});
+        Thread.sleep(2000); // dauert 2 Sekunden
     }
 }
